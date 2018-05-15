@@ -1,0 +1,70 @@
+{{template "Header"}}
+
+<div class="container-fluid dashboard-padding">
+    <div class="row">
+        <nav class="col-xs-12 col-sm-3 col-lg-1">
+            <div class="sidebar-sticky">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link formLabel col-12" href="/manage-data/users">
+                            Users
+                        </a>
+                    </li>  
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="col-xs-12 col-sm-9 col-lg-10 offset-lg-1">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                <h1 class="h2 pageTitle">Dashboard</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group mr-2">
+                        <button class="btn btn-sm btn-outline-secondary formLabel">Share</button>
+                        <button class="btn btn-sm btn-outline-secondary formLabel">Export</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="table-responsive report_list">
+                {{if .UserList}}
+                <table id="data_table" class="display table grid_table table-striped">
+                    <thead>
+                        <tr class="grid_header">
+                            <th class="formLabel">ID</th>
+                            <th class="formLabel">First Name</th>      
+                            <th class="formLabel">Last Name</th>      
+                            <th class="formLabel">Email</th>      
+                            <th class="formLabel">Password</th>   
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .UserList}}
+                        <tr>
+                            <td>{{.ID}}</td>
+                            <td>{{.FirstName}}</td>
+                            <td>{{.LastName}}</td>
+                            <td>{{.Email}}</td>
+                            <td>{{.Password}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+                {{end}}
+                <br />
+            </div>
+           
+                <script type="text/javascript">
+                    $(function(){
+                        $("#data_table").DataTable( {
+                            stateSave: true
+                        } );
+                    });
+                </script>
+               
+
+                
+            </div>
+        </main>
+    </div>
+</div>
+
+{{template "Footer"}}

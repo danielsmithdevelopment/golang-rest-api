@@ -1,0 +1,82 @@
+{{define "Header"}}
+<!DOCTYPE html>
+<html lang="en" class="container-fluid">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+ <header class="header">
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="/index">
+          <img src="" height="42">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Site-Nav" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Site-Nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/manage-data">Manage Data</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="/manage-profile">Manage Profile</a>
+                <a class="dropdown-item" href="/logout">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+{{end}}
+
+{{define "Footer"}}
+<footer class="footer container-fluid">
+  <div class="text-center row">
+    <div class="col-xs-12 col-sm-6">
+      <p id="footer-contact">
+        <br>
+        Department Name
+        <br>
+        Organization Name
+        <br>
+        Contact Info
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-4 offset-sm-2">
+      <br>
+      <a href="#" style="text-decoration: none;" target="_blank">
+        <span style="color: #757173;">Powered by</span><img src="" height="72px">
+        <br>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS, then Datatables -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,45 @@
+{{template "Header"}}
+
+  <!-- Begin page content -->
+  <main role="main" class="container-fluid">
+    <h1 class="mt-5 pageTitle">Recent Articles</h1>
+
+    <div class="table-responsive report_list">
+        {{if .UserList}}
+        <table id="data_table" class="display table grid_table table-striped">
+            <thead>
+                <tr class="grid_header">
+                    <th class="formLabel">ID</th>      
+                    <th class="formLabel">First Name</th>
+                    <th class="formLabel">Last Name</th>      
+                    <th class="formLabel">Email</th>      
+                    <th class="formLabel">Password</th>      
+                </tr>
+            </thead>
+            <tbody>
+                {{range .UserList}}
+                <tr>
+                    <td>{{.ID}}</td>
+                    <td>{{.FirstName}}</td>
+                    <td>{{.LastName}}</td>
+                    <td>{{.Email}}</td>
+                    <td>{{.Password}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+        {{end}}
+        <br />
+    </div>
+   
+        <script type="text/javascript">
+            $(function(){
+                $("#data_table").DataTable( {
+                    stateSave: true
+                } );
+            });
+        </script>
+  </main>
+
+
+{{template "Footer"}}

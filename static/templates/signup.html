@@ -1,0 +1,30 @@
+{{template "Header"}}
+<form class="formSignup" method="post">
+    <h1 class="h3 mb-3 font-weight-normal text-center pageTitle">Register Below</h1>
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label class="formLabel" for="inputFirstname">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="inputFirstname" placeholder="First">
+        </div>
+        <div class="form-group col-6">
+            <label class="formLabel" for="inputLastname">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="inputLastname" placeholder="Last">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-12">
+            <label class="formLabel" for="inputEmail">Email</label>
+            <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-12">
+            <label class="formLabel" for="inputPassword">Password</label>
+            <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
+        </div>
+    </div>
+    <!-- <a class="formButton" href="/index"><button class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a> -->
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+</form>
+
+{{template "Footer"}}

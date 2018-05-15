@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+}
+
+.title {
+    font-size: 200px;
+}
+
+.pageTitle, .formLabel, td {
+    color: #757173 !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.formButton, .pageTitle {
+    padding: 16px;
+}
+.formSignup {
+    padding-bottom: 16px;
+}
+/* For mobile phones: */
+.dashboard-padding {
+    padding-top: 16px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.header {
+    color: #000000;
+    background-color: #000000 !important;
+}
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 96%;
+    height: auto; /* Set the fixed height of the footer here */
+    background-color: #000000;
+    color: #757173;
+    padding-bottom: 16px;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .dashboard-padding {
+        padding: 32px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+    .dashboard-padding {
+        padding: 48px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    /* For desktop: */
+    .dashboard-padding {
+        padding: 64px;
+    }
+}
