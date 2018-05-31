@@ -1,3 +1,34 @@
+// Copyright 2018 Daniel Smith. All rights reserved.
+// Use of this source code is governed by a MIT-style
+// license that can be found in the LICENSE file.
+
+// Golang REST Server with Swagger
+//
+// This documentation describes example APIs found under https://github.com/danielsmithdevelopment/golang-rest-api
+//
+//     Schemes: https
+//     BasePath: /v1
+//     Version: 1.0.0
+//     License: MIT http://opensource.org/licenses/MIT
+//     Contact: Daniel Smith <danielsmithdevelopment@gmail.com> https://danielsmithdevelopment.com
+//     Host: https://github.com/danielsmithdevelopment/golang-rest-api
+//
+//     Consumes:
+//     - application/json
+//
+//     Produces:
+//     - application/json
+//
+//     Security:
+//     - bearer
+//
+//     SecurityDefinitions:
+//     bearer:
+//          type: apiKey
+//          name: Authorization
+//          in: header
+//
+// swagger:meta
 package main
 
 import (
